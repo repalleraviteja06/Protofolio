@@ -1,0 +1,46 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" rx="40" fill="#07111F"/>
+  <rect x="36" y="36" width="1128" height="728" rx="32" fill="url(#bg)"/>
+  <rect x="72" y="72" width="1056" height="56" rx="18" fill="#0E1B2E"/>
+  <circle cx="108" cy="100" r="8" fill="#F97316"/>
+  <circle cx="136" cy="100" r="8" fill="#FACC15"/>
+  <circle cx="164" cy="100" r="8" fill="#22C55E"/>
+  <rect x="220" y="86" width="182" height="28" rx="14" fill="#12243D"/>
+  <rect x="88" y="164" width="452" height="444" rx="28" fill="#0C1729"/>
+  <rect x="660" y="164" width="452" height="212" rx="28" fill="#0C1729"/>
+  <rect x="660" y="396" width="452" height="212" rx="28" fill="#0C1729"/>
+  <circle cx="314" cy="288" r="96" fill="url(#portrait)"/>
+  <rect x="148" y="420" width="212" height="18" rx="9" fill="#E2E8F0"/>
+  <rect x="148" y="452" width="286" height="14" rx="7" fill="#38BDF8" fill-opacity="0.9"/>
+  <rect x="148" y="488" width="248" height="12" rx="6" fill="#94A3B8" fill-opacity="0.85"/>
+  <rect x="148" y="512" width="220" height="12" rx="6" fill="#94A3B8" fill-opacity="0.65"/>
+  <rect x="148" y="554" width="140" height="40" rx="20" fill="#10B981"/>
+  <rect x="684" y="196" width="164" height="18" rx="9" fill="#E2E8F0"/>
+  <rect x="684" y="232" width="304" height="12" rx="6" fill="#94A3B8" fill-opacity="0.75"/>
+  <rect x="684" y="256" width="264" height="12" rx="6" fill="#94A3B8" fill-opacity="0.55"/>
+  <rect x="684" y="290" width="180" height="54" rx="18" fill="url(#card1)"/>
+  <rect x="880" y="290" width="180" height="54" rx="18" fill="url(#card2)"/>
+  <rect x="684" y="428" width="164" height="18" rx="9" fill="#E2E8F0"/>
+  <rect x="684" y="464" width="350" height="12" rx="6" fill="#94A3B8" fill-opacity="0.75"/>
+  <rect x="684" y="488" width="312" height="12" rx="6" fill="#94A3B8" fill-opacity="0.55"/>
+  <rect x="684" y="530" width="392" height="20" rx="10" fill="#12243D"/>
+  <rect x="684" y="566" width="330" height="20" rx="10" fill="#12243D"/>
+  <defs>
+    <linearGradient id="bg" x1="96" y1="88" x2="1090" y2="744" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1628"/>
+      <stop offset="1" stop-color="#08101C"/>
+    </linearGradient>
+    <linearGradient id="portrait" x1="218" y1="192" x2="410" y2="384" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="card1" x1="684" y1="290" x2="864" y2="344" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14B8A6"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="card2" x1="880" y1="290" x2="1060" y2="344" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import ParticleBackground from "./ParticleBackground";
+import heroPhoto from "../assets/hero-photo.jpeg";
 
 const roles = [
   "Computer Science Student",
@@ -62,8 +63,9 @@ const HeroSection = () => {
       <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-primary/8 rounded-full blur-[100px]" />
       <div className="absolute bottom-1/4 -right-32 w-[500px] h-[500px] bg-accent/8 rounded-full blur-[100px]" />
 
-      <motion.div style={{ y, opacity, scale }} className="relative z-10 container">
-        <div className="max-w-4xl mx-auto text-center">
+      <motion.div style={{ y, opacity, scale }} className="relative z-10 container py-24 md:py-32">
+        <div className="grid items-center gap-14 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="text-center lg:text-left">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -78,7 +80,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.7 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[1.1] mb-6"
+            className="text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold leading-[1.05] mb-6"
           >
             <span className="text-foreground">Hi, I'm{" "}</span>
             <span className="text-gradient">Ravi Teja</span>
@@ -97,7 +99,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.6 }}
-            className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed"
+            className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed"
           >
             Building elegant web solutions with clean code. Passionate about crafting digital experiences that matter.
           </motion.p>
@@ -106,7 +108,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12"
           >
             <motion.a
               href="#projects"
@@ -140,7 +142,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.1 }}
-            className="flex items-center justify-center gap-4"
+            className="flex items-center justify-center lg:justify-start gap-4"
           >
             {[
               { icon: Github, href: "https://github.com/repalleraviteja06", label: "GitHub" },
@@ -162,6 +164,33 @@ const HeroSection = () => {
                 <Icon size={18} />
               </motion.a>
             ))}
+          </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 40, scale: 0.94 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ delay: 0.45, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="relative mx-auto w-full max-w-[22rem]"
+          >
+            <div className="absolute -inset-8 rounded-full bg-gradient-to-br from-primary/25 via-cyan-400/10 to-accent/20 blur-3xl" />
+            <motion.div
+              animate={{ y: [-10, 10, -10], rotate: [-1, 1, -1] }}
+              transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
+              className="absolute inset-0 rounded-full border border-primary/20"
+            />
+            <div className="relative overflow-hidden rounded-full border border-white/10 bg-black p-3 shadow-[0_0_60px_hsl(162_80%_48%_/_0.18)] backdrop-blur-xl">
+              <div className="relative aspect-square overflow-hidden rounded-full bg-black">
+                <img
+                  src={heroPhoto}
+                  alt="Ravi Teja portrait"
+                  className="h-full w-full scale-[1.18] object-cover object-[center_12%] saturate-110 contrast-110 brightness-105"
+                />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.3),transparent_38%),linear-gradient(180deg,rgba(8,15,30,0.05),rgba(8,15,30,0.45))]" />
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-950 via-slate-950/35 to-transparent" />
+                <div className="absolute left-8 top-16 h-24 w-24 rounded-full border border-cyan-300/30 bg-cyan-300/10 blur-2xl" />
+              </div>
+            </div>
           </motion.div>
         </div>
       </motion.div>

@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { ExternalLink, Github, X, ChevronRight } from "lucide-react";
 import { useState, useRef } from "react";
 import jobPortalImg from "@/assets/project-jobportal.jpg";
+import portfolioImg from "@/assets/portfolio-preview.svg";
 import touristImg from "@/assets/project-tourist.jpg";
 
 const projects = [
@@ -12,6 +13,7 @@ const projects = [
     fullDesc: "A comprehensive job portal application featuring role-based dashboards for job seekers and recruiters. Includes advanced search filters, responsive layouts, and a clean UX that guides users through the job application process seamlessly.",
     tech: ["HTML", "CSS", "JavaScript", "MySQL"],
     github: "https://github.com/repalleraviteja06",
+    demo: "",
     image: jobPortalImg,
   },
   {
@@ -21,6 +23,7 @@ const projects = [
     fullDesc: "A full-featured tourist management platform with booking management, itinerary planning, and user authentication. Built with scalable architecture supporting multiple concurrent users and comprehensive testing cycles.",
     tech: ["HTML", "CSS", "JavaScript", "MySQL", "PHP"],
     github: "https://github.com/repalleraviteja06",
+    demo: "",
     image: touristImg,
   },
   {
@@ -30,7 +33,8 @@ const projects = [
     fullDesc: "A professional portfolio website built with React and Framer Motion featuring particle backgrounds, typing animations, parallax scrolling, and a fully responsive design with dark and light mode support.",
     tech: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/repalleraviteja06",
-    image: null,
+    demo: "",
+    image: portfolioImg,
   },
 ];
 
@@ -85,6 +89,16 @@ const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => v
           >
             <Github size={16} /> View Code
           </a>
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-border px-5 py-2.5 rounded-xl text-sm font-medium hover:border-primary/40 hover:text-primary transition-colors"
+            >
+              <ExternalLink size={16} /> Live Demo
+            </a>
+          )}
         </div>
       </div>
     </motion.div>
@@ -130,15 +144,30 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
               </h3>
               <p className="text-xs font-code text-muted-foreground mt-0.5">{project.date}</p>
             </div>
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-              className="p-2 rounded-lg hover:bg-primary/10 text-muted-foreground hover:text-primary transition-all"
-            >
-              <Github size={18} />
-            </a>
+            <div className="flex items-center gap-1">
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="p-2 rounded-lg hover:bg-primary/10 text-muted-foreground hover:text-primary transition-all"
+                  aria-label={`${project.title} live demo`}
+                >
+                  <ExternalLink size={18} />
+                </a>
+              )}
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="p-2 rounded-lg hover:bg-primary/10 text-muted-foreground hover:text-primary transition-all"
+                aria-label={`${project.title} source code`}
+              >
+                <Github size={18} />
+              </a>
+            </div>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed mb-4">{project.desc}</p>
           <div className="flex flex-wrap gap-1.5 mb-4">

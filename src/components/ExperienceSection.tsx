@@ -9,7 +9,7 @@ const timeline = [
     org: "Lovely Professional University",
     period: "Aug 2023 – Present",
     location: "Punjab, India",
-    detail: "CGPA: 5.30",
+    detail: "CGPA: 5.8",
     desc: "Pursuing computer science with focus on software development, data structures, and web technologies.",
   },
   {
@@ -37,25 +37,25 @@ const certs = [
     title: "Digital Systems: From Logic Gates to Processors",
     provider: "Coursera",
     period: "Nov 2024 – Dec 2024",
-    link: "https://www.coursera.org/account/accomplishments/verify",
+    link: "https://www.coursera.org/account/accomplishments/certificate/QMM0DRHP9G2W",
   },
   {
     title: "Packet Switching Networks and Algorithms",
     provider: "Coursera",
     period: "Oct 2024 – Nov 2024",
-    link: "https://www.coursera.org/account/accomplishments/verify",
+    link: "https://www.coursera.org/account/accomplishments/certificate/SYGHXDWMLJHG",
   },
   {
     title: "Computer Communications Specialization",
     provider: "Coursera",
     period: "Sep 2024 – Nov 2024",
-    link: "https://www.coursera.org/account/accomplishments/verify",
+    link: "https://www.coursera.org/account/accomplishments/specialization/certificate/XSM899GOBOWY",
   },
   {
     title: "Legacy Responsive Web Design",
     provider: "freeCodeCamp",
     period: "Aug 2023 – Nov 2023",
-    link: "https://www.freecodecamp.org/certification",
+    link: "https://www.freecodecamp.org/certification/fcc00571dd2-f274-40b8-a765-72aed981c09f/responsive-web-design",
   },
 ];
 
